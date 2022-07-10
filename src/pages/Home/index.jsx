@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { useState,useEffect,useRef } from "react"
+import { useState,useEffect } from "react"
 import React from "react"
 import Card from "../../components/Card"
 import { MediaQueries } from "../../utils/style/MediaQueries"
@@ -23,8 +23,6 @@ const H1=styled.h1`
 function Home() {
 
 //déclaration des constantes 
-    const [isDataLoading, setDataLoading] = useState(false)
-    const [error, setError] = useState(false)
     const [temperature, setTemperature] = useState([])
     const noTemperature= temperature.status || temperature.message
 
@@ -54,14 +52,14 @@ function Home() {
                             temperature.map((temperature) => (
                                         
                                 <Card 
-                                    key={temperature.name}
+                                    key={temperature.index}
                                     resultat={temperature.resultat}
                                     date_mesure_temp={temperature.date_mesure_temp}
                                     heure_mesure_temp={temperature.heure_mesure_temp}
                                 />
                                 
                         ))):(
-                            <p>No countries found... </p>
+                            <p>No temperature found... </p>
                         )}
                     </AllCard>                  
             </Body>

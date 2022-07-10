@@ -38,13 +38,10 @@ const StyledGlobalStyle=createGlobalStyle`
         font-weight: 300;
         font-size:18px;
     }
-
     h3{
         font-weight: 700;
         font-size:20px;
     }
-
-
     p{
         font-size:16px;
     }
