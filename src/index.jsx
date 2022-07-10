@@ -1,7 +1,6 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
 import {BrowserRouter as Router,Route,Routes} from "react-router-dom"
-import Description from "./pages/Description"
 import Home from "./pages/Home"
 import Header from "./components/Header"
 import Error from "./components/Error"
@@ -20,8 +19,6 @@ root.render(
                 <Routes>
                         <Route path="*" element={<Error/>} />   
                         <Route exact path="/" element={<Home/>}/>
-                        <Route exact path="/undefined" element={<Home/>}/>
-                        <Route path="/:countryName" element={<Description/>}/>     
                 </Routes>
             </ThemeProvider>
         </Router>

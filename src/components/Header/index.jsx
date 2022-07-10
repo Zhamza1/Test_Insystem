@@ -33,7 +33,7 @@ function Header() {
     return(
         <NavContainer id="navContainer">
             <Title to="/" id="title">
-                 Where in the world ? 
+                 What the temperature ? 
             </Title>
        
             <DarkMode onClick={() => toggleTheme()}>

@@ -3,39 +3,25 @@ import React from "react"
 
 const CardWrapper=styled.div`
     width:275px;
-    height:340px;
+    height:180px;
     background-color:white;
     border-radius:5px;
     box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
     margin-top:50px;
-    cursor:pointer;
 `
-
-const Image=styled.img`
-    height:45%;
-    border-radius:5px 5px 0px 0;
-    width:100%;
-`
-
 const Texte=styled.div`
-    margin:15px 20px;
+    margin:20px 20px;
 `
 
-function Card ({region,capital,population,name,flags,showDetails,code}) {
-
-const showDetailsHandler= () => {
-    showDetails(code)
-}
+function Card ({heure_mesure_temp,date_mesure_temp,resultat}) {
     
     return(
         <React.Fragment>
-            <CardWrapper onClick={showDetailsHandler} id="Card">
-                <Image src={flags}/>
+            <CardWrapper id="Card">
                             <Texte>
-                                <h3>{name}</h3>
-                                <p>Population:{population} </p>
-                                <p>Region:{region} </p>
-                                <p>Capital:{capital}  </p>
+                                <p>Date de mesure de la  température : {date_mesure_temp} </p>
+                                <p>Heure de mesure de la température: {heure_mesure_temp} </p>
+                                <p>Température : {resultat} °C </p>
                             </Texte>
             </CardWrapper>
         </React.Fragment>            
