@@ -7,44 +7,6 @@ import { MediaQueries } from "../../utils/style/MediaQueries"
 const Body=styled.div`
     margin:0px 70px;
 `
-
-const FilterContainer=styled.div`
-    display:flex;
-    justify-content:space-between;
-    margin:50px 0px; 
-    ${MediaQueries("tablet")`
-    flex-wrap:wrap;
-    `}
-`
-const SearchBar=styled.input`
-    width:400px;
-    height:50px;
-    border-radius:5px;
-    border:none;
-    outline:none;
-    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
-    padding:0 30px;
-    ${MediaQueries("mobile")`
-    width:300px;
-    `}
-    ${MediaQueries("mobil")`
-    width:200px;
-    `}
-    
-
-`
-const Filter=styled.select`
-    height:50px;
-    width:150px;
-    border:none;
-    outline:none;
-    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
-    border-radius:5px;
-    padding-left:10px;
-    ${MediaQueries("tablet")`
-    margin-top:20px;
-    `}
-`
 const AllCard=styled.div`
     display:flex;
     flex-wrap:wrap;
@@ -52,6 +14,10 @@ const AllCard=styled.div`
     ${MediaQueries("table")`
     justify-content:center;
     `}
+`
+
+const H1=styled.h1`
+    text-align:center;
 `
 
 function Home() {
@@ -81,6 +47,8 @@ function Home() {
     return(
         <React.Fragment>
             <Body>
+
+                <H1>À L'HOGNEAU À GUSSIGNIES (59)</H1>
                     <AllCard>
                         {!noTemperature ? (
                             temperature.map((temperature) => (
