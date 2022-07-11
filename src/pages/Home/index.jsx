@@ -50,14 +50,12 @@ function Home() {
                     <AllCard>
                         {!noTemperature ? (
                             temperature.map((temperature) => (
-                                        
                                 <Card 
                                     key={temperature.index}
                                     resultat={temperature.resultat}
                                     date_mesure_temp={temperature.date_mesure_temp}
                                     heure_mesure_temp={temperature.heure_mesure_temp}
-                                />
-                                
+                                />   
                         ))):(
                             <p>No temperature found... </p>
                         )}
